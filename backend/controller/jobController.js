@@ -39,6 +39,8 @@ const apply = async (req, res) => {
 const login = async (req, res) => {
   const { email, password } = req.body;
   try {
+    if (!email || !password)
+      throw new Error(`pls input your email and password`);
     const person = await Auth.findOne({ email });
     if (!person) {
       return res.status(403).json({ message: "incorrect information" });
@@ -59,5 +61,13 @@ const all_app = async (req, res) => {
     data: user,
   });
 };
+const me = (req, res) => {
+  try {
+    res.status(200).json({ user: req.user });
+    console.log(req.user);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
-module.exports = { apply, login, all_app };
+module.exports = { apply, login, all_app, me };

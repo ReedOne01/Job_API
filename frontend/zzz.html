@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        /* position: relative; */
+      }
+
+      div {
+        /* width: 50px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+            position: absolute;
+            transition: all 5s 0s ease-in; */
+
+        /* animation */
+        /* animation-name: test;
+            animation-duration: 10000ms;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both; */
+        /* animation: test 5s linear 0s 3 normal both; */
+      }
+
+      h2 {
+        animation: loader 5s linear 0.5s infinite;
+        font-size: 100px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      /* changing h2 color */
+      @keyframes loader {
+        0% {
+          color: blueviolet;
+        }
+        25% {
+          color: blue;
+        }
+        50% {
+          color: brown;
+        }
+        75% {
+          color: tomato;
+        }
+        100% {
+          color: steelblue;
+        }
+      }
+
+      h2::before {
+        content: "";
+        animation: loadingContent 5s ease 0.3s forwards;
+      }
+
+      /* writing content */
+      @keyframes loadingContent {
+        0% {
+          content: "L";
+        }
+        20% {
+          content: "Lo";
+        }
+        35% {
+          content: "Loa";
+        }
+        40% {
+          content: "Load";
+        }
+        55% {
+          content: "Loadi";
+        }
+        75% {
+          content: "Loadin";
+        }
+        100% {
+          content: "Loading";
+        }
+      }
+      h2::after {
+        content: "";
+        animation: loadingDot 2s ease 5s infinite;
+      }
+      /* writing in dot */
+      @keyframes loadingDot {
+        25% {
+          content: ".";
+        }
+        50% {
+          content: "..";
+        }
+        75% {
+          content: "...";
+        }
+        100% {
+          content: "";
+        }
+      }
+
+      @keyframes test {
+        /* from {
+                margin-left: 100px;
+            }
+
+            to {
+                margin-left: 0;
+            } */
+
+        0% {
+          background-color: yellow;
+          top: 0;
+          left: 0;
+          margin-left: 200px;
+        }
+
+        25% {
+          background-color: blue;
+        }
+
+        50% {
+          background-color: green;
+          top: 10px;
+          left: 100%;
+        }
+
+        75% {
+          background-color: tomato;
+          top: 800px;
+          right: 0;
+        }
+        90% {
+          background-color: tomato;
+          top: 800px;
+          left: 0;
+        }
+
+        100% {
+          background-color: blueviolet;
+          top: 0;
+          left: 0;
+          margin-left: 300px;
+        }
+      }
+      @media screen and (min-width: 500px) and (max-width: 600px) {
+        body {
+          background: red;
+        }
+        main {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          height: 100vh;
+          /* position: relative; */
+        }
+      }
+    </style>
+    <!-- <script defer src="./app.js"></script> -->
+  </head>
+
+  <body>
+    AzUE6GDge0GNDiVx
+
+    <main>
+      <!-- <div>
+            DVD
+        </div> -->
+
+      <h2></h2>
+    </main>
+    AzUE6GDge0GNDiVx
+  </body>
+
+  <!-- <script src="./app.js"></script> -->
+</html>
