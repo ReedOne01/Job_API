@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 
-// const connectDB = require("./config/db");
-// connectDB(process.env.MONGO_URI);
+const connectDB = require("./config/db");
+connectDB(process.env.MONGO_URI);
 
 const port = process.env.PORT || 3000;
 app.use(express.json());

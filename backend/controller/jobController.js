@@ -49,7 +49,7 @@ const login = async (req, res) => {
     if (!comparePassword) throw new Error("incorrect password");
     res.status(200).json({
       msg: `welcome ${person.fullName}`,
-      token: generateToken(new_application._id),
+      token: generateToken(person._id),
     });
   } catch (error) {
     res.status(502).json({ error: error.message });
@@ -64,7 +64,7 @@ const all_app = async (req, res) => {
 const me = (req, res) => {
   try {
     res.status(200).json({ user: req.user });
-    console.log(req.user);
+    // console.log(req.user);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
